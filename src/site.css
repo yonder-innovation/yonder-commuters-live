@@ -55,11 +55,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 
     position: absolute;
     bottom: 25px;
     left: 25px;
+}
+
+.logo-url {
+    margin-left: 20px;
 }
 
 #logo {
