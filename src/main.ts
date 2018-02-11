@@ -14,6 +14,15 @@ class App {
             .subscribe((articles: Article[]) => {
                 this.carousel.setArticles(articles);
             });
+
+        this.scheduleReload();
+    }
+
+    private scheduleReload() {
+        setTimeout(
+            () => window.location.reload(),
+            config.appReloadInterval * 1000
+        );
     }
 }
 

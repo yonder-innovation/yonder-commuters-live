@@ -56,6 +56,7 @@ body {
 
 .article .title {
     color: #00589D;
+    max-width: 70%;
     text-align: center;
 }
 
