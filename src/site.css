@@ -46,6 +46,14 @@ body {
     font-size: 2em;
 }
 
+.slick-dots {
+    bottom: 25px;
+}
+
+.slick-dots li button:before {
+    font-size: 9px;
+}
+
 .article .title {
     color: #00589D;
     text-align: center;
