@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #CFE3F8;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+}
+
+.feed-container, .slick-list, .slick-track {
+    height: 100%;
+}
+
+.slick-arrow {
+    display: none;
+}
+
+.slick-dots {
+    bottom: 0;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+    padding-bottom: 30px;
+}
+
+.slick-slide.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.article .title {
+    color: #00589D;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
+
+#logo {
+    background-image: url('./ycommuters-logo.png');
+    background-size: contain;
+
+    height: 100px;
+    width: 300px;
+}
+
+.qr-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+#qr {
+    background-image: url('./ycommuters-qr.png');
+    background-size: contain;
+
+    height: 150px;
+    width: 150px;
+}
