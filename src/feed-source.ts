@@ -49,6 +49,8 @@ export class FeedSource {
     }
 
     private parseArticle(data: { author: string; content: string; id: string; link: string; pubDate: string; title: string; }): Article {
+        const username = data.author.slice(3);
+
         return {
             id: data.id,
             url: data.link,
@@ -59,7 +61,7 @@ export class FeedSource {
             flair: '',
             author: {
                 username: data.author,
-                pictureUrl: '',
+                pictureUrl: `https://firebasestorage.googleapis.com/v0/b/ycommuters-live.appspot.com/o/${username}.jpg?alt=media`,
                 name: ''
             }
         };

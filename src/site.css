@@ -91,3 +91,38 @@ body {
     height: 150px;
     width: 150px;
 }
+
+.article-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.article-content .author-picture {
+    display: none;
+    position: relative;
+    height: 160px;
+    width: 160px;
+
+    border-radius: 50%;
+    border: 3px solid #00589D;
+}
+
+.author-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    margin-left: 15px;
+}
+
+.recommended-by, .date {
+    font-size: 0.9em;
+}
+
+.username {
+    font-style: italic;
+    color: #00589D;
+    font-size: 1em;
+}

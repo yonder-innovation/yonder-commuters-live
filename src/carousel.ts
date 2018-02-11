@@ -1,3 +1,5 @@
+import * as distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
+
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import { interval } from 'rxjs/observable/interval';
@@ -22,6 +24,7 @@ export class Carousel {
             dots: true,
             speed: 500,
             autoplay: true,
+            // autoplay: false,
             autoplaySpeed: this.cycleInterval * 1000,
         });
     }
@@ -56,7 +59,13 @@ export class Carousel {
             <div class="article">
                 <h2 class="title">${article.title}</h2>
                 <div class="article-content">
-                    <span>recommended by <em>${article.author.username}</em></span>
+                    <img class="author-picture" onload="this.style.display='block'" src=${article.author.pictureUrl} />
+
+                    <div class="author-text">
+                        <span class="recommended-by">recommended by</span>
+                        <span class="username">${article.author.username}</span>
+                        <span class="date">${distanceInWordsToNow(article.date, { addSuffix: true })}</span>
+                    </div>
                 </div>
             </div>
         `);
