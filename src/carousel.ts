@@ -57,7 +57,7 @@ export class Carousel {
     private addArticle(article: Article): void {
         this.element.slick('slickAdd',`
             <div class="article">
-                <h2 class="title">${article.title}</h2>
+                <h1 class="title">${article.title}</h1>
                 <div class="article-content">
                     <img class="author-picture" onload="this.style.display='block'" src=${article.author.pictureUrl} />
 
