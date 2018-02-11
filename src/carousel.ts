@@ -30,29 +30,22 @@ export class Carousel {
         this.element.slick('slickPause');
 
         const articlesToRemove: number[] = [];
-        const articlesToAdd: Article[] = [];
-
         this.currentArticles.forEach((article: Article, index: number) => {
-            if (articles.find((x) => x.id === article.id)) {
-                return;
+            if (!articles.find((x) => x.id === article.id)) {
+                articlesToRemove.push(index);
             }
-
-            articlesToRemove.push(index);
         });
-
         articlesToRemove.forEach((index) => {
-            console.log('removing at index', index);
             this.element.slick('slickRemove', index);
             this.currentArticles.splice(index, 1);
         });
 
+        const articlesToAdd: Article[] = [];
         articles.forEach((article: Article) => {
-            if (this.currentArticles.find((x) => x.id === article.id)) {
-                return;
+            if (!this.currentArticles.find((x) => x.id === article.id)) {
+                this.currentArticles.push(article);
+                this.addArticle(article);
             }
-
-            this.currentArticles.push(article);
-            this.addArticle(article);
         });
 
         this.element.slick('slickPlay');
